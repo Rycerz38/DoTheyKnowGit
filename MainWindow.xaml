@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="383,321,0,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA"/>
+        <TextBox x:Name="InputTB" HorizontalAlignment="Left" Margin="260,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Center" Width="298" TextAlignment="Center" Height="48"/>
+        <RadioButton GroupName="type" Content="E-Mail" HorizontalAlignment="Left" Margin="260,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <RadioButton GroupName="type" Content="Phone" HorizontalAlignment="Left" Margin="383,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <RadioButton GroupName="type" Content="Name" HorizontalAlignment="Left" Margin="507,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
     </Grid>
 </Window>

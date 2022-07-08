@@ -142,6 +142,10 @@
       <DependentUpon>DoTheyKnowDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\kom.datasource" />
+    <None Include="Properties\DataSources\Morele.datasource" />
+    <None Include="Properties\DataSources\sub.datasource" />
+    <None Include="Properties\DataSources\wsei.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
