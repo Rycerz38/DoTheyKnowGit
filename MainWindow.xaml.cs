@@ -44,8 +44,8 @@ namespace DoTheyKnow
                 }
                 catch (NullReferenceException)
                 {
-                    //Code to do something with e
-                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
 
                 }
             }
@@ -58,8 +58,8 @@ namespace DoTheyKnow
                 }
                 catch (NullReferenceException)
                 {
-                    //Code to do something with e
-                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
 
                 }
             }
@@ -72,8 +72,8 @@ namespace DoTheyKnow
                 }
                 catch (NullReferenceException)
                 {
-                    //Code to do something with e
-                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
 
                 }
             }

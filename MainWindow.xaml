@@ -12,13 +12,13 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="383,321,0,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA" Click="ButtonSubmit_Click"/>
-        <TextBox x:Name="InputTB" HorizontalAlignment="Left" Margin="260,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Center" Width="298" TextAlignment="Center" Height="48"/>
-        <RadioButton GroupName="typ" Name="mail" Content="E-Mail" HorizontalAlignment="Left" Margin="260,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <RadioButton GroupName="typ" Name ="phone" Content="Phone" HorizontalAlignment="Left" Margin="383,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <RadioButton GroupName="typ" Name="imie" Content="Name" HorizontalAlignment="Left" Margin="507,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="384,227,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA" Click="ButtonSubmit_Click"/>
+        <TextBox x:Name="InputTB" HorizontalAlignment="Left" Margin="261,103,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Top" Width="298" TextAlignment="Center" Height="48"/>
+        <RadioButton GroupName="typ" Name="mail" Content="E-Mail" HorizontalAlignment="Left" Margin="261,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton GroupName="typ" Name ="phone" Content="Phone" HorizontalAlignment="Left" Margin="384,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton GroupName="typ" Name="imie" Content="Name" HorizontalAlignment="Left" Margin="508,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox x:Name="konsola" HorizontalAlignment="Left" Margin="400,57,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="subscribeButton" Content="Setup allert for your E-mail!" HorizontalAlignment="Left" Margin="31,60,0,0" Grid.Row="1" VerticalAlignment="Top" Click="subscribeButton_Click"/>
+        <Button x:Name="subscribeButton" Content="Update DB" HorizontalAlignment="Left" Margin="31,60,0,0" Grid.Row="1" VerticalAlignment="Top" Click="subscribeButton_Click" Height="40"/>
 
     </Grid>
 
