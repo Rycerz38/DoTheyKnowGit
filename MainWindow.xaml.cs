@@ -23,17 +23,17 @@ namespace DoTheyKnow
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-    }
+        }
         private void ButtonSubmit_Click(object sender, RoutedEventArgs e)
         {
             string ValueToCheck = InputTB.Text;
             DoTheyKnowMainDBEntities context = new DoTheyKnowMainDBEntities();
-            
+
 
             if (mail.IsChecked == true)
             {
@@ -42,7 +42,7 @@ namespace DoTheyKnow
                 {
                     konsola.Text = wynik.Id.ToString();
                 }
-                catch (NullReferenceException exep)
+                catch (NullReferenceException)
                 {
                     //Code to do something with e
                     konsola.Text = "jestes bezpieczny";
@@ -56,7 +56,7 @@ namespace DoTheyKnow
                 {
                     konsola.Text = wynik.Id.ToString();
                 }
-                catch (NullReferenceException exep)
+                catch (NullReferenceException)
                 {
                     //Code to do something with e
                     konsola.Text = "jestes bezpieczny";
@@ -70,7 +70,7 @@ namespace DoTheyKnow
                 {
                     konsola.Text = wynik.Id.ToString();
                 }
-                catch (NullReferenceException exep)
+                catch (NullReferenceException)
                 {
                     //Code to do something with e
                     konsola.Text = "jestes bezpieczny";
@@ -81,9 +81,13 @@ namespace DoTheyKnow
             {
                 konsola.Text = "Nie wybrano opcji!";
             }
+           
         }
 
+        private void subscribeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 win = new Window1();
+            win.Show();
+        }
     }
-    
-
 }

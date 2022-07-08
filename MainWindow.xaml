@@ -18,6 +18,8 @@
         <RadioButton GroupName="typ" Name ="phone" Content="Phone" HorizontalAlignment="Left" Margin="383,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <RadioButton GroupName="typ" Name="imie" Content="Name" HorizontalAlignment="Left" Margin="507,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <TextBox x:Name="konsola" HorizontalAlignment="Left" Margin="400,57,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="subscribeButton" Content="Setup allert for your E-mail!" HorizontalAlignment="Left" Margin="31,60,0,0" Grid.Row="1" VerticalAlignment="Top" Click="subscribeButton_Click"/>
 
     </Grid>
+
 </Window>
