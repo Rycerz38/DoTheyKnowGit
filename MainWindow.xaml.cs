@@ -23,6 +23,67 @@ namespace DoTheyKnow
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
     }
+        private void ButtonSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            string ValueToCheck = InputTB.Text;
+            DoTheyKnowMainDBEntities context = new DoTheyKnowMainDBEntities();
+            
+
+            if (mail.IsChecked == true)
+            {
+                kom wynik = context.koms.FirstOrDefault(k => k.email == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik.Id.ToString();
+                }
+                catch (NullReferenceException exep)
+                {
+                    //Code to do something with e
+                    konsola.Text = "jestes bezpieczny";
+
+                }
+            }
+            else if (phone.IsChecked == true)
+            {
+                kom wynik = context.koms.FirstOrDefault(k => k.phone == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik.Id.ToString();
+                }
+                catch (NullReferenceException exep)
+                {
+                    //Code to do something with e
+                    konsola.Text = "jestes bezpieczny";
+
+                }
+            }
+            else if (imie.IsChecked == true)
+            {
+                kom wynik = context.koms.FirstOrDefault(k => k.name == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik.Id.ToString();
+                }
+                catch (NullReferenceException exep)
+                {
+                    //Code to do something with e
+                    konsola.Text = "jestes bezpieczny";
+
+                }
+            }
+            else
+            {
+                konsola.Text = "Nie wybrano opcji!";
+            }
+        }
+
+    }
+    
+
 }

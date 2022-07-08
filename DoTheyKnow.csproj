@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoTheyKnowDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DoTheyKnowMainDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoTheyKnowMainDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="kom.cs">
       <DependentUpon>DoTheyKnowDB.tt</DependentUpon>
     </Compile>
@@ -141,10 +146,29 @@
     <None Include="DoTheyKnowDB.edmx.diagram">
       <DependentUpon>DoTheyKnowDB.edmx</DependentUpon>
     </None>
+    <None Include="DoTheyKnowMainDBDataSet.xsc">
+      <DependentUpon>DoTheyKnowMainDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DoTheyKnowMainDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoTheyKnowMainDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DoTheyKnowMainDBDataSet.xss">
+      <DependentUpon>DoTheyKnowMainDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\App.datasource" />
+    <None Include="Properties\DataSources\DoTheyKnow.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\DoTheyKnow.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\DoTheyKnowMainDBEntities.datasource" />
     <None Include="Properties\DataSources\kom.datasource" />
+    <None Include="Properties\DataSources\MainWindow.datasource" />
     <None Include="Properties\DataSources\Morele.datasource" />
+    <None Include="Properties\DataSources\sp_helpdiagramdefinition_Result.datasource" />
+    <None Include="Properties\DataSources\sp_helpdiagrams_Result.datasource" />
     <None Include="Properties\DataSources\sub.datasource" />
+    <None Include="Properties\DataSources\sysdiagram.datasource" />
     <None Include="Properties\DataSources\wsei.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

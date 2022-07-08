@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoTheyKnow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="453" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="383,321,0,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA"/>
+
+        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="383,321,0,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA" Click="ButtonSubmit_Click"/>
         <TextBox x:Name="InputTB" HorizontalAlignment="Left" Margin="260,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Center" Width="298" TextAlignment="Center" Height="48"/>
-        <RadioButton GroupName="type" Content="E-Mail" HorizontalAlignment="Left" Margin="260,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <RadioButton GroupName="type" Content="Phone" HorizontalAlignment="Left" Margin="383,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <RadioButton GroupName="type" Content="Name" HorizontalAlignment="Left" Margin="507,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <RadioButton GroupName="typ" Name="mail" Content="E-Mail" HorizontalAlignment="Left" Margin="260,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <RadioButton GroupName="typ" Name ="phone" Content="Phone" HorizontalAlignment="Left" Margin="383,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <RadioButton GroupName="typ" Name="imie" Content="Name" HorizontalAlignment="Left" Margin="507,273,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <TextBox x:Name="konsola" HorizontalAlignment="Left" Margin="400,57,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
