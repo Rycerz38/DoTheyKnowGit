@@ -27,8 +27,9 @@ namespace DoTheyKnow
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            CzyNull = false;
         }
+        public bool CzyNull = false;
         private void ButtonSubmit_Click(object sender, RoutedEventArgs e)
         {
             string ValueToCheck = InputTB.Text;
@@ -40,14 +41,69 @@ namespace DoTheyKnow
                 kom wynik = context.koms.FirstOrDefault(k => k.email == InputTB.Text);
                 try
                 {
+                    CzyNull = true ;
                     konsola.Text = wynik.Id.ToString();
+                    if (wynik !=null) {
+                    CzyNull=false;
+                    }
                 }
                 catch (NullReferenceException)
                 {
-                    Window2 win2 = new Window2();
-                    win2.Show();
 
                 }
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.email == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik2 .Id.ToString();
+                    if (wynik2 != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+
+                }
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.email == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik3.Id.ToString();
+                    if (wynik3 != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    //Code to do something with exeption
+                    CzyNull = true;
+
+                }
+                konsola.Text = "Nie musisz nic zmieniac :)!";
+
+                if (!CzyNull)
+                {
+                    konsola.Text = "Zmień adres email!";
+                    Window3 win3 = new Window3();
+                    win3.Show();
+
+                }
+                else
+                {
+
+                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
+                }
+
+
+
+
+
+
+
+
             }
             else if (phone.IsChecked == true)
             {
@@ -58,10 +114,11 @@ namespace DoTheyKnow
                 }
                 catch (NullReferenceException)
                 {
-                    Window2 win2 = new Window2();
-                    win2.Show();
+                    //Code to do something with exeption
+                    konsola.Text = "jestes bezpieczny";
 
                 }
+
             }
             else if (imie.IsChecked == true)
             {
@@ -72,8 +129,8 @@ namespace DoTheyKnow
                 }
                 catch (NullReferenceException)
                 {
-                    Window2 win2 = new Window2();
-                    win2.Show();
+                    //Code to do something with exeption
+                    konsola.Text = "jestes bezpieczny";
 
                 }
             }
@@ -81,7 +138,7 @@ namespace DoTheyKnow
             {
                 konsola.Text = "Nie wybrano opcji!";
             }
-           
+
         }
 
         private void subscribeButton_Click(object sender, RoutedEventArgs e)
