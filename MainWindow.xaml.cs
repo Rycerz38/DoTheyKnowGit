@@ -96,22 +96,9 @@ namespace DoTheyKnow
                     Window2 win2 = new Window2();
                     win2.Show();
                 }
-
-
-
-
-
-
-
-
             }
             else if (phone.IsChecked == true)
             {
-
-
-
-
-
 
 
                 kom wynik = context.koms.FirstOrDefault(k => k.phone == InputTB.Text);
@@ -173,26 +160,6 @@ namespace DoTheyKnow
                     Window2 win2 = new Window2();
                     win2.Show();
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
             else if (imie.IsChecked == true)
@@ -256,15 +223,6 @@ namespace DoTheyKnow
                     Window2 win2 = new Window2();
                     win2.Show();
                 }
-
-
-
-
-
-
-
-
-
             }
             else
             {
