@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:DoTheyKnow"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#E04E71">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="contentTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here E-Mail" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,204,0,0" Height="22"/>
+        <TextBox Background="#F7864A" x:Name="contentTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here E-Mail" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,204,0,0" Height="22"/>
         <Button x:Name="SubmitMail" Content="Add Leaked Data" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="110" Click="SubmitMail_Click"/>
         <Label Content="E-Mail:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="253,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-1" Width="46"/>
-        <TextBox x:Name="contentPhoneTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here Phone" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,173,0,0" Height="22"/>
+        <TextBox Background="#F7864A"  x:Name="contentPhoneTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here Phone" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,173,0,0" Height="22"/>
         <Label Content="Phone:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="253,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-1" Width="46"/>
-        <TextBox x:Name="contentNameTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here Name" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,147,0,0" Height="22"/>
+        <TextBox Background="#F7864A"  x:Name="contentNameTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write here Name" VerticalAlignment="Top" Width="168" Grid.Column="1" Margin="0,147,0,0" Height="22"/>
         <Label Content="Name:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="253,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-1" Width="46"/>
         <RadioButton x:Name="komRB" Content="kom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="308,124,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="DBS"/>
         <RadioButton x:Name="wseiRB" Content="wsei" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="416,124,0,0" VerticalAlignment="Top" GroupName="DBS"/>

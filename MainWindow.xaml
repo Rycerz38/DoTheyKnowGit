@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:DoTheyKnow"
         mc:Ignorable="d"
         Title="MainWindow" Height="453" Width="800">
-    <Grid>
+    <Grid Background="#E04E71">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="384,236,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA" Click="ButtonSubmit_Click"/>
-        <TextBox x:Name="InputTB" HorizontalAlignment="Left" Margin="261,103,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Top" Width="298" TextAlignment="Center" Height="48"/>
+        <Button  x:Name="ButtonSubmit" Content="Check" HorizontalAlignment="Left" Margin="384,236,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="10,10,10,10" BorderBrush="#FFDADADA" Click="ButtonSubmit_Click"/>
+        <TextBox Background="#F7864A"  x:Name="InputTB" HorizontalAlignment="Left" Margin="261,103,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Check your data." VerticalAlignment="Top" Width="298" TextAlignment="Center" Height="48"/>
         <RadioButton GroupName="typ" Name="mail" Content="E-Mail" HorizontalAlignment="Left" Margin="261,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton GroupName="typ" Name ="phone" Content="Phone" HorizontalAlignment="Left" Margin="384,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton GroupName="typ" Name="imie" Content="Name" HorizontalAlignment="Left" Margin="508,179,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="konsola" HorizontalAlignment="Left" Margin="350,210,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Write down your data and click check" VerticalAlignment="Top" Width="218"/>
-        <Button x:Name="subscribeButton" Content="Update DB" HorizontalAlignment="Left" Margin="31,60,0,0" Grid.Row="1" VerticalAlignment="Top" Click="subscribeButton_Click" Height="40"/>
+        <TextBox Background="#F7864A"  x:Name="konsola" HorizontalAlignment="Left" Margin="350,210,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Write down your data and click check" VerticalAlignment="Top" Width="218"/>
+        <Button  x:Name="subscribeButton" Content="Update DB" HorizontalAlignment="Left" Margin="31,60,0,0" Grid.Row="1" VerticalAlignment="Top" Click="subscribeButton_Click" Height="40"/>
         <Label Content="Result:" HorizontalAlignment="Left" Margin="287,206,0,0" Grid.Row="1" VerticalAlignment="Top" Width="45"/>
 
     </Grid>
