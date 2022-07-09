@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace DoTheyKnow
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window3.xaml
+    /// Okno wyświetlane w momencie wykrycia danych w bazie.
     /// </summary>
     public partial class Window3 : Window
     {

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace DoTheyKnow
 {
     /// <summary>
-    /// Kod służący obsłudze wpisywania maili i powiadamiania użytkownika
+    /// Kod służący obsłudze wpisywania danych do bazy
     /// </summary>
     public partial class Window1 : Window
     {
@@ -26,14 +26,14 @@ namespace DoTheyKnow
         }
         private void SubmitMail_Click(object sender, RoutedEventArgs e)
         {
-            using (DoTheyKnowMainDBEntities context = new DoTheyKnowMainDBEntities())
+            using (DoTheyKnowMainDBEntities context = new DoTheyKnowMainDBEntities()) // Wpisanie bazy do obiektu
             {
 
-                if (komRB.IsChecked == true)
+                if (komRB.IsChecked == true) // sprawdzenie do ktorej bazy wpisać rekord
                 {
 
 
-                    kom kom = new kom
+                    kom kom = new kom //tworzenie obiektu do wpisania
                     {
                         email = contentTB.Text.ToString(),
                         phone = contentPhoneTB.Text.ToString(),
@@ -41,13 +41,13 @@ namespace DoTheyKnow
                     };
 
 
-                    context.koms.Add(kom);
+                    context.koms.Add(kom);//dodanie do bazy
                 }
-                else if (MoreleRB.IsChecked == true)
+                else if (MoreleRB.IsChecked == true)// sprawdzenie do ktorej bazy wpisać rekord
                 {
 
 
-                    Morele morele = new Morele
+                    Morele morele = new Morele //tworzenie obiektu do wpisania
                     {
                         email = contentTB.Text.ToString(),
                         phone = contentPhoneTB.Text.ToString(),
@@ -55,13 +55,13 @@ namespace DoTheyKnow
                     };
 
 
-                    context.Moreles.Add(morele);
+                    context.Moreles.Add(morele);//dodanie do bazy
                 }
-                else if (wseiRB.IsChecked == true)
+                else if (wseiRB.IsChecked == true)// sprawdzenie do ktorej bazy wpisać rekord
                 {
 
 
-                    wsei wsei = new wsei
+                    wsei wsei = new wsei//tworzenie obiektu do wpisania
                     {
                         email = contentTB.Text.ToString(),
                         phone = contentPhoneTB.Text.ToString(),
@@ -69,7 +69,7 @@ namespace DoTheyKnow
                     };
 
 
-                    context.wseis.Add(wsei);
+                    context.wseis.Add(wsei);//dodanie do bazy
                 }
                 context.SaveChanges();
             }

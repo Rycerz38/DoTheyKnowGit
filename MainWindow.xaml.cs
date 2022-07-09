@@ -16,7 +16,9 @@ using System.Windows.Shapes;
 namespace DoTheyKnow
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Główne okno do sprawdzania danych w bazie.
+    /// Aplikacja startuje tutaj i pozwala użytkonikowi na sprawdzenie czy jego dane są w bazie wyciekniętych danych
+    /// ponadto możemy stąd wejść do okna rozszerzenia bazy danych o kolejne rekordy
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -25,20 +27,20 @@ namespace DoTheyKnow
             InitializeComponent();
 
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e) 
         {
-            CzyNull = false;
+            CzyNull = false; //czyszczenie zmiennej
         }
-        public bool CzyNull = false;
+        public bool CzyNull = false; //zmienna odpowiedzialna za stan "czy rekord jest w bazie"
         private void ButtonSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string ValueToCheck = InputTB.Text;
+            string ValueToCheck = InputTB.Text; //zczytanie danych wejściowych
             DoTheyKnowMainDBEntities context = new DoTheyKnowMainDBEntities();
 
 
-            if (mail.IsChecked == true)
+            if (mail.IsChecked == true) // sprawdzamy którą daną będziemy sprawdzać
             {
-                kom wynik = context.koms.FirstOrDefault(k => k.email == InputTB.Text);
+                kom wynik = context.koms.FirstOrDefault(k => k.email == InputTB.Text); //wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     CzyNull = true ;
@@ -51,7 +53,7 @@ namespace DoTheyKnow
                 {
 
                 }
-                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.email == InputTB.Text);
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.email == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik2 .Id.ToString();
@@ -65,7 +67,7 @@ namespace DoTheyKnow
 
 
                 }
-                wsei wynik3 = context.wseis.FirstOrDefault(w => w.email == InputTB.Text);
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.email == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik3.Id.ToString();
@@ -82,14 +84,14 @@ namespace DoTheyKnow
                 }
                 konsola.Text = "Nie musisz nic zmieniac :)!";
 
-                if (!CzyNull)
+                if (!CzyNull) //instrukcja warunkowa która wyświetla okno "Your data Leaked"
                 {
                     konsola.Text = "Zmień adres email!";
                     Window3 win3 = new Window3();
                     win3.Show();
 
                 }
-                else
+                else //instrukcja która wyświetla okno "Your data is safe"
                 {
 
                     konsola.Text = "jestes bezpieczny";
@@ -97,11 +99,11 @@ namespace DoTheyKnow
                     win2.Show();
                 }
             }
-            else if (phone.IsChecked == true)
+            else if (phone.IsChecked == true)// sprawdzamy którą daną będziemy sprawdzać
             {
 
 
-                kom wynik = context.koms.FirstOrDefault(k => k.phone == InputTB.Text);
+                kom wynik = context.koms.FirstOrDefault(k => k.phone == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     CzyNull = true;
@@ -115,7 +117,7 @@ namespace DoTheyKnow
                 {
 
                 }
-                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.phone == InputTB.Text);
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.phone == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik2.Id.ToString();
@@ -129,7 +131,7 @@ namespace DoTheyKnow
 
 
                 }
-                wsei wynik3 = context.wseis.FirstOrDefault(w => w.phone == InputTB.Text);
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.phone == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik3.Id.ToString();
@@ -146,14 +148,14 @@ namespace DoTheyKnow
                 }
                 konsola.Text = "Nie musisz nic zmieniac :)!";
 
-                if (!CzyNull)
+                if (!CzyNull)//instrukcja która wyświetla okno "Your data Leaked"
                 {
                     konsola.Text = "Zmień numer telefonu!";
                     Window3 win3 = new Window3();
                     win3.Show();
 
                 }
-                else
+                else//instrukcja która wyświetla okno "Your data is safe"
                 {
 
                     konsola.Text = "jestes bezpieczny";
@@ -162,9 +164,9 @@ namespace DoTheyKnow
                 }
 
             }
-            else if (imie.IsChecked == true)
+            else if (imie.IsChecked == true)// sprawdzamy którą daną będziemy sprawdzać
             {
-                kom wynik = context.koms.FirstOrDefault(k => k.name == InputTB.Text);
+                kom wynik = context.koms.FirstOrDefault(k => k.name == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     CzyNull = true;
@@ -178,7 +180,7 @@ namespace DoTheyKnow
                 {
 
                 }
-                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.name == InputTB.Text);
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.name == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik2.Id.ToString();
@@ -192,7 +194,7 @@ namespace DoTheyKnow
 
 
                 }
-                wsei wynik3 = context.wseis.FirstOrDefault(w => w.name == InputTB.Text);
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.name == InputTB.Text);//wyszukanie w bazie rekordu i sprawdzenie czy istnieje
                 try
                 {
                     konsola.Text = wynik3.Id.ToString();
@@ -209,14 +211,14 @@ namespace DoTheyKnow
                 }
                 konsola.Text = "Nie musisz nic zmieniac :)!";
 
-                if (!CzyNull)
+                if (!CzyNull) //instrukcja która wyświetla okno "Your data Leaked"
                 {
                     konsola.Text = "Zmień adres email!";
                     Window3 win3 = new Window3();
                     win3.Show();
 
                 }
-                else
+                else //instrukcja która wyświetla okno "Your data is safe"
                 {
 
                     konsola.Text = "jestes bezpieczny";
@@ -224,7 +226,7 @@ namespace DoTheyKnow
                     win2.Show();
                 }
             }
-            else
+            else //sytuacja gdy użytkownik nie wybierze żadnego radio buttona
             {
                 konsola.Text = "Nie wybrano opcji!";
             }
@@ -233,8 +235,8 @@ namespace DoTheyKnow
 
         private void subscribeButton_Click(object sender, RoutedEventArgs e)
         {
-            Window1 win = new Window1();
-            win.Show();
+            //Window1 win = new Window1();
+            //win.Show();
         }
     }
 }

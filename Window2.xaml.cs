@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace DoTheyKnow
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window2.xaml
+    /// Okno wyświetlane gdy nie wykryto żadnych danych w bazie.
     /// </summary>
     public partial class Window2 : Window
     {
