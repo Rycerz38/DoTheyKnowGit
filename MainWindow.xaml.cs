@@ -107,17 +107,92 @@ namespace DoTheyKnow
             }
             else if (phone.IsChecked == true)
             {
+
+
+
+
+
+
+
                 kom wynik = context.koms.FirstOrDefault(k => k.phone == InputTB.Text);
                 try
                 {
+                    CzyNull = true;
                     konsola.Text = wynik.Id.ToString();
+                    if (wynik != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.phone == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik2.Id.ToString();
+                    if (wynik2 != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+
+                }
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.phone == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik3.Id.ToString();
+                    if (wynik3 != null)
+                    {
+                        CzyNull = false;
+                    }
                 }
                 catch (NullReferenceException)
                 {
                     //Code to do something with exeption
-                    konsola.Text = "jestes bezpieczny";
+                    CzyNull = true;
 
                 }
+                konsola.Text = "Nie musisz nic zmieniac :)!";
+
+                if (!CzyNull)
+                {
+                    konsola.Text = "Zmień numer telefonu!";
+                    Window3 win3 = new Window3();
+                    win3.Show();
+
+                }
+                else
+                {
+
+                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             }
             else if (imie.IsChecked == true)
@@ -125,14 +200,71 @@ namespace DoTheyKnow
                 kom wynik = context.koms.FirstOrDefault(k => k.name == InputTB.Text);
                 try
                 {
+                    CzyNull = true;
                     konsola.Text = wynik.Id.ToString();
+                    if (wynik != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                Morele wynik2 = context.Moreles.FirstOrDefault(m => m.name == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik2.Id.ToString();
+                    if (wynik2 != null)
+                    {
+                        CzyNull = false;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+
+                }
+                wsei wynik3 = context.wseis.FirstOrDefault(w => w.name == InputTB.Text);
+                try
+                {
+                    konsola.Text = wynik3.Id.ToString();
+                    if (wynik3 != null)
+                    {
+                        CzyNull = false;
+                    }
                 }
                 catch (NullReferenceException)
                 {
                     //Code to do something with exeption
-                    konsola.Text = "jestes bezpieczny";
+                    CzyNull = true;
 
                 }
+                konsola.Text = "Nie musisz nic zmieniac :)!";
+
+                if (!CzyNull)
+                {
+                    konsola.Text = "Zmień adres email!";
+                    Window3 win3 = new Window3();
+                    win3.Show();
+
+                }
+                else
+                {
+
+                    konsola.Text = "jestes bezpieczny";
+                    Window2 win2 = new Window2();
+                    win2.Show();
+                }
+
+
+
+
+
+
+
+
+
             }
             else
             {
